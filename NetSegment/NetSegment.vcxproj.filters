@@ -18,5 +18,19 @@
     <ClCompile Include="myMain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="NetSeg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="myNetseg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myNetseg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NetSeg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

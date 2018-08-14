@@ -147,6 +147,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="myMain.cpp" />
+    <ClCompile Include="myNetseg.cpp" />
+    <ClCompile Include="NetSeg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myNetseg.h" />
+    <ClInclude Include="NetSeg.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

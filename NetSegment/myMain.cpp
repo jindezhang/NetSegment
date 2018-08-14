@@ -5,69 +5,26 @@
 #include<cctype>
 #include<algorithm>
 #include<cstdlib>
-using namespace std;
-
-typedef struct ip
-{
-	int first;
-	int second;
-	int three;
-	int fouth;
-} IP;
-
-int judgeIp( string ipSubNet, IP &ip )
-{
-	int index = 0;
-	ip.first = atoi( &ipSubNet[ index ] );
-	if ( ip.first > 255 )
-		return 0;
-
-	index++;
-	index = ipSubNet.find_first_of( '.', index );
-	ip.second = atoi( &ipSubNet[ ++index ] );
-	if ( ip.second > 255 )
-		return 0;
-
-	index++;
-	index = ipSubNet.find_first_of( '.', index );
-	ip.three = atoi( &ipSubNet[ ++index ] );
-	if ( ip.three > 255 )
-		return 0;
-
-	index++;
-	index = ipSubNet.find_first_of( '.', index );
-	ip.fouth = atoi( &ipSubNet[ ++index ] );
-	if ( ip.fouth > 255 )
-		return 0;
-
-	return 1;
-}
+#include "NetSeg.h"
+#include "myNetseg.h"
 
 int main()
 {
-	string ipSubNet, ipAdd1, ipAdd2;
-	IP subNet, ip1, ip2;
-	while ( cin >> ipSubNet >> ipAdd1 >> ipAdd2 )
-	{
-		if ( judgeIp( ipSubNet, subNet ) && judgeIp( ipAdd1, ip1 ) && judgeIp( ipAdd2, ip2 ) )
-		{
-			ip1.first = ip1.first & subNet.first;
-			ip1.second = ip1.first & subNet.second;
-			ip1.second = ip1.first & subNet.second;
-			ip1.fouth = ip1.first & subNet.fouth;
+	//checkNetSegment();
+	
+	
+	//std::string str = "121/323.3231.12";
+	/*
+	int atoi( const char *str );
 
-			ip2.first = ip2.first & subNet.first;
-			ip2.second = ip2.first & subNet.second;
-			ip2.second = ip2.first & subNet.second;
-			ip2.fouth = ip2.first & subNet.fouth;
+		std::string str = "121/323.3231.12";
+	 atoi(&str[ 0 ]) == 121
+	 atoi(str[ 0 ])  ->eorro;
+	*/
+	//std::cout << atoi(&str[0]) << "##" << str[ 2 ] << std::endl;
+	//std::cout << mysubstr( "12.22.2...") << std::endl;
 
-			if ( ip1.first == ip2.first&&ip1.second == ip2.second&&ip1.three == ip2.three&&ip1.fouth == ip2.fouth )
-				cout << '0' << endl;
-			else
-				cout << '2' << endl;
-		}
-		else
-			cout << '1' << endl;
-	}
+	show();
+
 	return 0;
 }
